@@ -1,0 +1,8 @@
+{
+  "name": "Remix Affiliate Video Director Studio TEST",
+  "description": "Interactive TikTok \u0026 Shopee UGC video campaign director, teleprompter, and AI prompt generator",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

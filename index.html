@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Make window.fetch writable so external scripts or parent preview harnesses reassigning window.fetch do not throw
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var currentFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return currentFetch;
+            },
+            set: function(val) {
+              currentFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // Ignore if already configured
+        }
+      })();
+    </script>
+    <title>Remix Affiliate Video Director Studio TEST</title>
+    <meta name="description" content="Interactive TikTok & Shopee UGC video campaign director, teleprompter, and AI prompt generator" />
+    <meta property="og:title" content="Remix Affiliate Video Director Studio TEST" />
+    <meta property="og:description" content="Interactive TikTok & Shopee UGC video campaign director, teleprompter, and AI prompt generator" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
